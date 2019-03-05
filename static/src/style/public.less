@@ -1,0 +1,83 @@
+@rem: 25rem;
+// ===================reset=================
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,li,header,section,form,div {margin:0;padding:0;-webkit-text-size-adjust:100%;
+	font-family:Helvetica;box-sizing: border-box;}
+ul,ol,dl,dd {list-style: none;}
+a {text-decoration: none;}
+a,input,button,textarea {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-appearance: none;outline: none;}
+textarea{box-shadow:0px 0px 0px rgba(0,0,0,0);border-radius:0;}
+*:not(input,textarea) {-webkit-touch-callout: none;-webkit-user-select: none;}
+
+//===================弹窗=================
+.dialog-alert {
+   .shade {
+      position: fixed; top: 0;right: 0;bottom: 0; left: 0;
+      z-index: 1040;background-color: #000;opacity: 0.3; z-index: 99
+    }
+    .content {
+        opacity:0;width:340/@rem; border-radius: 8/@rem;background-color: #fff; position: fixed;
+        left: 50%;top: 179/@rem;z-index:100;margin-left: -170/@rem;box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        div {
+            
+        }
+        div.text {
+           padding:30/@rem 30/@rem;font-size: 24/@rem;color: #666666;min-height: 160/@rem;position: relative;
+           display:flex;
+           justify-content: center;
+            align-items: center;  
+           .inner{
+           	  // position: absolute;top: 50%; left: 50%;transform: translate(-50%, -50%);
+           }
+         }
+        div.btn {
+           border-top:1px solid #ddd;font-size:20/@rem;height: 60/@rem;line-height: 60/@rem;
+           color: #999999;overflow: hidden;text-align: center;
+           span#dialog-alert-no {border-right:1px solid  #ddd;}
+           span {float:left;width: 50%;text-align: center;box-sizing: border-box; }
+        }
+      
+      }
+    }
+
+// ===================loading=================
+   @keyframes rotate {
+        from { transform: rotate(0deg);}
+        50%  { transform: rotate(180deg);}
+        to   { transform: rotate(360deg);}
+    }
+
+.myLoading1 {
+     position: fixed;
+     z-index: 105;
+     left:0;
+     right: 0;
+     top: 0;
+     height: 100vh;
+     width: 100vw;
+     .shade {
+        width: 90/@rem;
+        height: 95/@rem;
+        background: rgba(0,0,0,0.5);
+        position: absolute;
+        left: 50%;
+        top:30%;
+        border-radius:5/@rem;
+        padding-top: 10/@rem;
+        margin-left: -45/@rem;
+          span.text {
+             display: block;
+             text-align: center;
+             font-size: 16/@rem;
+             color:#fff;
+          }
+           img {
+             display: block;
+             width: 30/@rem;
+             height: 30/@rem;
+             margin: 5/@rem auto 9/@rem auto;
+             animation: rotate 1s linear infinite;
+          }
+     }
+ }
+
+
