@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="/moving/static/src/style/public.css">
+    <link rel="stylesheet" type="text/css" href="/moving/static/src/js/lib/dist/photoswipe.css">
+    <link rel="stylesheet" type="text/css" href="/moving/static/src/js/lib/dist/default-skin/default-skin.css">
+    <link href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+    <style>
+         html, body {
+             width: 100%;
+             height: 100%;
+             position: relative;
+             margin: 0;
+             background: #fafafa;
+         }
+         figcaption, figure {
+             margin: 0;
+         }
+         figure img {
+             width: 100%;
+         }
+         .title {
+             font-size: 18px;
+             text-align: center;
+             margin-bottom:15px;
+             margin-top: 4px;
+             font-weight: bold;
+         }
+        .playerBox{width:100%;position: fixed;bottom: 0px;background-color:#fff;}
+        .content { padding:15px 15px 67px 15px;}
+        .content p { margin-bottom: 15px;text-indent: 2em;line-height: 1.8}
+        .content .cell { width: 100%;margin-bottom: 20px; }
+        .aplayer-author { display: none; }
+    </style>
+</head>
+<body>
+<div class="content my-gallery">
+       <div class="title">原始瓷的历史沿革</div>
+       <p>中国人创作了无数奇迹。四大发明众所周知，但他们只是其中的一部分。瓷器，也是世界公认的中国人的伟大发明，世人把它们叫作“china”。他的最初形态，就是“原始瓷”。原始瓷创烧于商代前期，历经千年生产，战国中期衰落，东汉以后发展成为“成熟瓷器”。</p>
+        <figure class="cell">
+        <a href="../../static/src/img/img1.jpg" itemprop="contentUrl" data-size="400x500">
+            <img src="../../static/src/img/img1.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description" style="display: none">图片1描述</figcaption>
+       </figure>
+       <p>基于古陶制作经验，古人使之升华而创造了原始瓷。原始瓷使用泥条盘筑、轮制成型、器表施釉及高温烧制的工艺，装饰取法自然，纹样包罗万象，创作随心所欲，制作千变万化，是先秦时期艺术天地的一朵奇葩。目前考古发现的产地，主要集中在江南吴越地区。从器物装饰、品类中，可看出较为鲜明的民族信仰与精神，洋溢着浓郁的远古气息。在其发展过程中，曾大致出现两次创作高峰，即西周中晚期至春秋早期、春秋晚期至战国早期</p>
+       <figure class="cell">
+        <a href="../../static/src/img/img2.jpg" itemprop="contentUrl" data-size="400x400">
+            <img src="../../static/src/img/img2.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description" style="display: none" >图片2描述</figcaption>
+       </figure>
+       <p>然而前后两个时期审美风格迥异。第一个时期造型古拙、装饰繁缛。第二个时期品类丰富，以形取胜，除日用器外，更有瓷仿礼器、乐器，瓷仿青铜兵器、农具等，仿得精美绝伦，惟妙惟肖，妙趣天成——泥条的可塑性被发挥到了极致。</p>
+       <figure class="cell">
+        <a href="../../static/src/img/img3.jpg" itemprop="contentUrl" data-size="600x400">
+            <img src="../../static/src/img/img3.jpg" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description"  style="display: none">图片3描述</figcaption>
+    </figure>
+</div>
+</div>
+ <div class="playerBox">
+     <div id="player1"></div>
+ </div>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+              <!--   <button class="pswp__button pswp__button--share" title="Share"></button> -->
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+    <script src="/moving/static/src/js/lib/dist/photoswipe.min.js"></script>
+     <script src="/moving/static/src/js/lib/dist/photoswipe-ui-default.min.js"></script>
+    <script>
+                const ap = new APlayer({
+                    container: document.getElementById('player1'),
+                    mutex: true, 
+                    autoplay:true,
+                    theme: '#FADFA3',
+                    loop: 'all',
+                    preload: 'auto',
+                    volume: 0.7,
+                    audio: [
+                        {
+                            name: '原始瓷的历史沿革',
+                            artist: "|",
+                            url: '../../static/src/img/mp3/sy.mp3',
+                            // cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000002ehzTm0TxXC2.jpg',
+                            theme: '#ebd0c2'
+                        }
+                    ]
+                });
+    </script>
+    <script type="text/javascript">
+         var initPhotoSwipeFromDOM = function(gallerySelector) {
+            // parse slide data (url, title, size ...) from DOM elements 
+            // (children of gallerySelector)
+              var el =  document.querySelectorAll( gallerySelector )[0];
+               var thumbElements = el.getElementsByTagName("figure");
+               for(var i = 0; i < thumbElements.length; i++ ){
+                       thumbElements[i].index = i;
+                 };
+            var parseThumbnailElements = function(el) {
+                var thumbElements = el.getElementsByTagName("figure"),
+                    numNodes = thumbElements.length,
+                    items = [],
+                    figureEl,
+                    linkEl,
+                    size,
+                    item;
+
+                for(var i = 0; i < numNodes; i++) {
+                    figureEl = thumbElements[i]; // <figure> element
+
+                    // include only element nodes 
+                    if(figureEl.nodeType !== 1) {
+                        continue;
+                    }
+
+                    linkEl = figureEl.children[0]; // <a> element
+
+                    size = linkEl.getAttribute('data-size').split('x');
+
+                    // create slide object
+                    item = {
+                        src: linkEl.getAttribute('href'),
+                        w: parseInt(size[0], 10),
+                        h: parseInt(size[1], 10)
+                    };
+
+                    if(figureEl.children.length > 1) {
+                        // <figcaption> content
+                        item.title = figureEl.children[1].innerHTML; 
+                    }
+                    if(linkEl.children.length > 0) {
+                        // <img> thumbnail element, retrieving thumbnail url
+                        item.msrc = linkEl.children[0].getAttribute('src');
+                    } 
+                    item.el = figureEl; // save link to element for getThumbBoundsFn
+                    items.push(item);
+                }
+                return items;
+            };
+
+
+
+            // find nearest parent element
+            var closest = function closest(el, fn) {
+                return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+            };
+
+
+
+            // triggers when user clicks on thumbnail
+            var onThumbnailsClick = function(e) {
+            
+                // var thumbElements =  galleryElements.getElementsByTagName("figure");
+              
+                e = e || window.event;
+                e.preventDefault ? e.preventDefault() : e.returnValue = false;
+                var eTarget = e.target || e.srcElement;
+                // find root element of slide
+                var clickedListItem = closest(eTarget, function(el) {
+                    return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                });
+
+        
+                if(!clickedListItem) {
+                    return;
+                }
+                // find index of clicked item by looping through all child nodes
+                // alternatively, you may define index via data- attribute
+             
+                    var clickedGallery = clickedListItem.parentNode,
+                    childNodes = clickedListItem.parentNode.childNodes,
+                    numChildNodes = childNodes.length,
+                    nodeIndex = 0,
+                    index;
+    
+                   // console.log(clickedListItem.index);
+                   index = clickedListItem.index;
+                    // console.log(clickedGallery);
+                    // console.log(childNodes);
+                    // console.log(numChildNodes);
+                // for (var i = 0; i < numChildNodes; i++) {
+                //     if(childNodes[i].nodeType !== 1) { 
+                //         continue; 
+                //     }
+
+                //     if(childNodes[i] === clickedListItem) {
+                //         index = nodeIndex;
+                //         break;
+                //     }
+                //     nodeIndex++;
+                // }
+                     // console.log(index);
+                if(index >= 0) {
+                    // open PhotoSwipe if valid index found
+                    openPhotoSwipe( index, clickedGallery );
+                }
+                return false;
+            };
+     
+        
+            var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                var pswpElement = document.querySelectorAll('.pswp')[0],
+                    gallery,
+                    options,
+                    items;
+
+                items = parseThumbnailElements(galleryElement);
+                console.log(items);
+                // define options (if needed)
+                options = {
+
+                    // define gallery index (for URL)
+                    galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                    getThumbBoundsFn: function(index) {
+                        // See Options -> getThumbBoundsFn section of documentation for more info
+                        var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                            pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                            rect = thumbnail.getBoundingClientRect(); 
+
+                        return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+                    }
+
+                };
+
+                // PhotoSwipe opened from URL
+                if(fromURL) {
+                    if(options.galleryPIDs) {
+                        // parse real index when custom PIDs are used 
+                        // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                        for(var j = 0; j < items.length; j++) {
+                            if(items[j].pid == index) {
+                                options.index = j;
+                                break;
+                            }
+                        }
+                    } else {
+                        // in URL indexes start from 1
+                        options.index = parseInt(index, 10) - 1;
+                    }
+                } else {
+                    options.index = parseInt(index, 10);
+                }
+
+                // exit if index not found
+                if( isNaN(options.index) ) {
+                    return;
+                }
+
+                if(disableAnimation) {
+                    options.showAnimationDuration = 0;
+                }
+
+                // Pass data to PhotoSwipe and initialize it
+                gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+                gallery.init();
+            };
+
+            // loop through all gallery elements and bind events
+            var galleryElements = document.querySelectorAll( gallerySelector );
+            for(var i = 0, l = galleryElements.length; i < l; i++) {
+                galleryElements[i].setAttribute('data-pswp-uid', i+1);
+                galleryElements[i].onclick = onThumbnailsClick;
+            }
+
+        };
+
+        // execute above function
+        initPhotoSwipeFromDOM('.my-gallery');
+    </script>
+
+</body>
